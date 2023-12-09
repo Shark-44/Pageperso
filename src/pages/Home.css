@@ -1,12 +1,10 @@
-body {
-  margin: 0;
-  padding: 0;
-}
-#root {
-  width: 100vw;
+.contenairHome {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
-.App h1 {
+.contenairHome h1 {
   position: absolute;
   top: 40%;
   left: 50%;

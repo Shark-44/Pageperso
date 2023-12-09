@@ -1,0 +1,30 @@
+
+.nameplants {
+	margin: 0;
+	width: 20px;
+	height: 20px;
+	margin: -50%;
+	border-radius: 50%;
+	background: aqua;
+	animation: rotate 3s linear infinite;
+}
+@keyframes rotate{
+	0%{
+		transform:rotate(0deg) translate(50px, 0) ;
+	}
+	100%{
+		transform:rotate(360deg) translate(50px, 0) ;
+	}
+}
+@keyframes orbit-Mercure {
+    0%,100%{
+		transform: translate(25px, 0);
+	}
+
+	25%, 75%{
+		transform: translate(0, 0);
+	}
+	50%{
+		transform: translate(-25px, 0);
+	}
+}
