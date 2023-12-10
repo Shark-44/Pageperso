@@ -1,0 +1,9 @@
+.contenairSolar {
+    background-image: url("../assets/space/8k_stars.jpg");
+    height: 100%;
+}
+.infoplanets{
+    position: fixed;
+    top:120px;
+    right: 0;
+}

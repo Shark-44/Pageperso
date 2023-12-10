@@ -3,13 +3,17 @@ import Planet from './Plantes';
 import "./SolarSystem.css"
 
 const SolarSystem = () => {
-  // Implement the logic for planet positioning and rotation
+  
   return (
     <div className="solar-system">
       <Sun />
-      <Planet name="Mercure" orbitRadius={50} rotationSpeed={3} />
-      <Planet name="Terre" orbitRadius={100} rotationSpeed={4} />
-         {/* Add other planets with their respective properties */}
+      <Planet name="Mercure" orbitRadius={50} rotationSpeed={1} />
+      <Planet name="Venus" orbitRadius={100} rotationSpeed={1.6} />
+      <Planet name="Terre" orbitRadius={150} rotationSpeed={4} />
+      <Planet name="Mars" orbitRadius={200} rotationSpeed={8} />
+      <Planet name="Jupiter" orbitRadius={250} rotationSpeed={48} />
+      <Planet name="Saturne" orbitRadius={300} rotationSpeed={120} />
+               
     </div>
   );
 };

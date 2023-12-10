@@ -6,6 +6,7 @@
     width: 100vw;
     display: flex;
     box-shadow: 0 0 20px 5px #16e87c50;
+    z-index: 100;
    
 }
 .navGlobal h1 {

@@ -3,10 +3,7 @@ import "./Plantes.css"
 
 const Plantes = ({ name, orbitRadius, rotationSpeed} ) => {
     const planetStyle = {
-        width: '20px',
-        height: '20px',
-        borderRadius: '50%',
-        position: 'absolute',
+        position: 'fixed',
         left: '50%',
         top: '50%',
         animation: `orbit-${name} ${rotationSpeed}s linear infinite`,
@@ -16,30 +13,29 @@ const Plantes = ({ name, orbitRadius, rotationSpeed} ) => {
         height: `${orbitRadius * 2}px`,
         border: '1px solid aqua',
         borderRadius: '50%',
-        position: 'relative',
-        margin: '20px',
-        top: '40%',
-        left:'30%',
+        position: 'fixed',
       }
       const test = {
-        
-        width: '20px',
-        height: '20px',
+        color: 'white',
+        width: '30px',
+        height: '30px',
         margin: '-50%',
         borderRadius:'50%',
-        background: 'aqua',
         animation: `rotate-${name} ${rotationSpeed}s linear infinite`,
       }
+      const urlimg = `../src/assets/space/${name}.jpg`
   return (
+    <div className="contenairplantes">
     <div style={axerotation} >
     <div style={planetStyle} className="plants">
-      <p style={test} className="nameplants">1</p>
+      <p style={test} className="nameplants"><img src={urlimg} alt={name} /></p>
+    </div>
     </div>
     </div>
   );
 };
 
-// Définissez les propTypes pour valider les types de vos props
+
 Plantes.propTypes = {
     name: PropTypes.string.isRequired,
     orbitRadius: PropTypes.number.isRequired,

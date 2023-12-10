@@ -1,6 +1,9 @@
 .solar-system {
     position: relative;
-    width: 500px; /* Ajustez la taille selon vos besoins */
-    height: 500px;
-    margin: auto;
+height: 100vh;
+  }
+  .test{
+    background-image: url("../assets/space/Venus.jpg");
+    width: 100px;
+    height: 100px;
   }
