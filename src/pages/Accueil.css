@@ -5,7 +5,7 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 .contenairAccueil p {
     width: 70vw;
@@ -24,7 +24,8 @@
 }
 .lestechno {
     display: flex;
-    gap: 10px
+    gap: 10px;
+    margin-top: 50px;
 }
 .lestechno img {
     width:300px;

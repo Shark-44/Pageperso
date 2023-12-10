@@ -8,8 +8,8 @@ const SolarSystem = () => {
     <div className="solar-system">
       <Sun />
       <Planet name="Mercure" orbitRadius={50} rotationSpeed={3} />
-      
-      {/* Add other planets with their respective properties */}
+      <Planet name="Terre" orbitRadius={100} rotationSpeed={4} />
+         {/* Add other planets with their respective properties */}
     </div>
   );
 };

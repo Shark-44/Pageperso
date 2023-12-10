@@ -9,9 +9,8 @@ const Plantes = ({ name, orbitRadius, rotationSpeed} ) => {
         position: 'absolute',
         left: '50%',
         top: '50%',
-        animation: `orbit-${name} ${rotationSpeed}s linear infinite`, // Utilisez une durée appropriée selon vos préférences
-        transformOrigin: `center ${orbitRadius}px`, // Utilisez la propriété orbitRadius pour positionner la planète à une distance du soleil
-      }
+        animation: `orbit-${name} ${rotationSpeed}s linear infinite`,
+          }
       const axerotation = {
         width: `${orbitRadius * 3}px`, 
         height: `${orbitRadius * 2}px`,
@@ -22,10 +21,19 @@ const Plantes = ({ name, orbitRadius, rotationSpeed} ) => {
         top: '40%',
         left:'30%',
       }
+      const test = {
+        
+        width: '20px',
+        height: '20px',
+        margin: '-50%',
+        borderRadius:'50%',
+        background: 'aqua',
+        animation: `rotate-${name} ${rotationSpeed}s linear infinite`,
+      }
   return (
     <div style={axerotation} >
     <div style={planetStyle} className="plants">
-      <p className="nameplants"></p>
+      <p style={test} className="nameplants">1</p>
     </div>
     </div>
   );
