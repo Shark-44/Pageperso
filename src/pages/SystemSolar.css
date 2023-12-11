@@ -7,3 +7,14 @@
     top:120px;
     right: 0;
 }
+.accelerator {
+    position:absolute;
+    top:120px;
+    left: 10px;
+    border: 1px solid blue;
+    width: 200px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
