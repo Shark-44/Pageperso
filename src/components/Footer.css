@@ -1,0 +1,24 @@
+.footer {
+   height: 60px;
+    color: aliceblue;
+     background-color: rgba(49, 49, 54, 0.993);
+    width: 100%;
+    display:flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-around
+ }
+ .footer p {
+    font-size: 1.5rem;
+    width: auto;
+ }
+
+.imgfooter {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+#happyend {
+    color: white;
+}

@@ -5,6 +5,7 @@ import logoWild from "../assets/wild logo.png"
 import logoHTML from "../assets/HTML_CSS.png"
 import logoNode from "../assets/Node.jpg"
 import logoJava from "../assets/Javascript.png"
+import Footer from "../components/Footer";
 
 
 function Accueil() {
@@ -16,6 +17,7 @@ function Accueil() {
                 Bonjour je me prénomme Joanny, passé 50 ans j&apos;ai voulu découvrir le code. Si au départ c&apos;était par culture générale, j&apos;ai découvert une passion et je veux en faire mon métier. Oui, mon ambition est d&apos;apprendre encore plus et devenir quelqu&apos;un qui maîtrise.
             </p>
             <p>Actuellement je recherche une entreprise qui voudra m&apos;accompagner au titre de Bachelor Concepteur Développeur d&apos;Applications</p>
+            <h5>Coordonnées sur CV qui est telechargeable sur GitHUB en bas...</h5>
         <div className="parcours">
         <h2>Mon parcours</h2>
         <p> J&apos;ai commencé ma carrière en tant qu&apos;électromécanicien dans l&apos;aéronavale (8 ans). Une des plus belle expérience humaine</p>
@@ -34,8 +36,9 @@ function Accueil() {
             <img src={logoreact} alt="React" />
             <img src={logoNode} alt="Node.js" />
         </div>
-        
+        <Footer />
         </div>
+       
         </>
     );
 }
