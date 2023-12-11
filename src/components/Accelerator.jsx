@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types'
 import './Accelerator.css';
 
-function Accelerator() {
+function Accelerator({currentIndex, setCurrentIndex, vitesse}) {
   const [animationIndex, setAnimationIndex] = useState(3);
 
 
@@ -9,12 +10,14 @@ function Accelerator() {
     if (animationIndex > 1) {
       setAnimationIndex(animationIndex - 1);
     }
+    setCurrentIndex((currentIndex + 1) % vitesse.length)
   };
 
   const handleDownClick = () => {
     if (animationIndex < 5) {
       setAnimationIndex(animationIndex + 1);
     }
+    setCurrentIndex((currentIndex - 1 + vitesse.length) % vitesse.length);
   };
 
   return (
@@ -32,5 +35,11 @@ function Accelerator() {
     </div>
   );
 }
+
+Accelerator.propTypes = {
+    currentIndex: PropTypes.number.isRequired,
+    setCurrentIndex: PropTypes.func.isRequired,
+    vitesse: PropTypes.array.isRequired,
+  }
 
 export default Accelerator;

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import "./SystemSolar.css"
 import Navbar from "../components/Navbar"
 import SolarSystem from "../components/SolarSystem"
@@ -5,13 +6,16 @@ import Horloge from "../components/Horloge"
 import Accelerator from "../components/Accelerator"
 
 function SystemSolar () {
+    const vitesse =[20, 10, 1, 0.5, 0.3]
+    const [currentIndex, setCurrentIndex] = useState(2)
+console.info(vitesse[currentIndex])
     return (
         <div className="contenairSolar">
             <Navbar />
             <div className="accelerator">
-            <Accelerator />
+            <Accelerator currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} vitesse={vitesse}/>
             </div>
-            <SolarSystem />
+            <SolarSystem vitesse={vitesse[currentIndex]}/>
             <div className="infoplanets">
                 <Horloge />
             </div>

@@ -5,7 +5,7 @@ import logoWild from "../assets/wild logo.png"
 import logoHTML from "../assets/HTML_CSS.png"
 import logoNode from "../assets/Node.jpg"
 import logoJava from "../assets/Javascript.png"
-import Accelerator from "../components/Accelerator";
+
 
 function Accueil() {
     return (
@@ -36,7 +36,6 @@ function Accueil() {
         </div>
         
         </div>
-        <Accelerator />
         </>
     );
 }
