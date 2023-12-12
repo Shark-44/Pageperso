@@ -1,0 +1,33 @@
+.contenairAccueil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 150px;
+}
+.contenairAccueil p {
+    width: 70vw;
+    text-align: center;
+    font-size: 2em;
+}
+.bootcamp {
+    display:block;
+}
+.blockbootcamp {
+    display: flex;
+    padding: 10px;
+    width: 70vw;
+    border: 5px solid #f72073;
+    border-radius: 10px;
+}
+.lestechno {
+    display: flex;
+    gap: 10px;
+    margin-top: 50px;
+}
+.lestechno img {
+    width:300px;
+    height: 250px;
+}

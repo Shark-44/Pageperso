@@ -1,0 +1,25 @@
+.contenairHome {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.contenairHome h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  font-size: 7vw;
+  font-weight: 600;
+  -webkit-text-stroke: 5px rgb(78, 243, 232);
+  color: transparent;
+
+  transform: translate(-50%, -50%)
+}
+
+#fleche-entree {
+  position: absolute;
+  top: 40%;
+  height: 40px;
+  left: 55%; 
+  transform: translateX(-50%); 
+}

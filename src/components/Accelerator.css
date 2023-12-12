@@ -1,0 +1,59 @@
+.contenairaccelerator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 50;
+  }
+  
+  .indicator {
+    border: 2px solid blue;
+    height: 20px;
+    width: 100px;
+  }
+  
+  .up {
+    border-left: 55px solid transparent;
+    border-right: 55px solid transparent;
+    border-bottom: 80px solid blue;
+  }
+  .up:active {
+    border-left: 55px solid transparent;
+    border-right: 55px solid transparent;
+    border-bottom: 80px solid #04d9ff;
+  }
+  
+  .down {
+    border-left: 55px solid transparent;
+    border-right: 55px solid transparent;
+    border-top: 80px solid blue;
+  }
+  
+  .down:active {
+    border-left: 55px solid transparent;
+    border-right: 55px solid transparent;
+    border-top: 80px solid #04d9ff;
+  }
+ 
+ 
+  .indicator.active {
+    animation: flashing 1.4s infinite alternate;
+  }
+  
+  @keyframes flashing {
+    0%, 18%, 21%, 32%, 35%, 39%, 42%, 100% {
+      box-shadow:
+        0 0 8px #fff,
+        inset 0 0 8px #fff,
+        0 0 32px #04d9ff,
+        inset 0 0 32px #04d9ff,
+        0 0 64px #04d9ff,
+        inset 0 0 64px #04d9ff;
+    };
+    20%, 34%, 41% {
+      text-shadow: none;
+      box-shadow: none;
+    }
+  }
+  
