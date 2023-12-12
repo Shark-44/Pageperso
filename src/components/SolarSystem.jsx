@@ -5,7 +5,6 @@ import "./SolarSystem.css"
 
 const SolarSystem = ({vitesse}) => {
   
-  console.info(vitesse)
   return (
     <div className="solar-system">
       <Sun />

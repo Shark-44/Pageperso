@@ -9,15 +9,17 @@ function Accelerator({currentIndex, setCurrentIndex, vitesse}) {
   const handleUpClick = () => {
     if (animationIndex > 1) {
       setAnimationIndex(animationIndex - 1);
+      setCurrentIndex((currentIndex + 1) % vitesse.length)
     }
-    setCurrentIndex((currentIndex + 1) % vitesse.length)
+    
   };
 
   const handleDownClick = () => {
     if (animationIndex < 5) {
       setAnimationIndex(animationIndex + 1);
+      setCurrentIndex((currentIndex - 1 + vitesse.length) % vitesse.length);
     }
-    setCurrentIndex((currentIndex - 1 + vitesse.length) % vitesse.length);
+    
   };
 
   return (

@@ -18,15 +18,24 @@
     border-right: 55px solid transparent;
     border-bottom: 80px solid blue;
   }
+  .up:active {
+    border-left: 55px solid transparent;
+    border-right: 55px solid transparent;
+    border-bottom: 80px solid #04d9ff;
+  }
   
   .down {
-    width: 0;
-    height: 0;
     border-left: 55px solid transparent;
     border-right: 55px solid transparent;
     border-top: 80px solid blue;
   }
   
+  .down:active {
+    border-left: 55px solid transparent;
+    border-right: 55px solid transparent;
+    border-top: 80px solid #04d9ff;
+  }
+ 
  
   .indicator.active {
     animation: flashing 1.4s infinite alternate;
