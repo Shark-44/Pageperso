@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router"
 import Video from '../components/Video'
 import "./Home.css"
+import fleche from "../assets/fleche.webp"
 function Home () {
     const navigate = useNavigate()
     const changePage = () =>{
@@ -10,7 +11,7 @@ function Home () {
         <div className="contenairHome">
             <Video />
             <h1>Joanny BERNARDEAU</h1>
-            <img id="fleche-entree" src="src/assets/fleche.webp" alt="fleche entrée" onClick={changePage}/>
+            <img id="fleche-entree" src={fleche} alt="fleche entrée" onClick={changePage}/>
         </div>
     )
 }
