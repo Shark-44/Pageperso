@@ -1,4 +1,4 @@
-import "./NavBar.css"
+import "./Navbar.css"
 import { NavLink } from "react-router-dom"
 import Dropdown from "./Dropdown"
 function Navbar () {
