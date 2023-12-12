@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import "./Plantes.css"
 
-const Plantes = ({ name, orbitRadius, rotationSpeed} ) => {
+const Plantes = ({ name, orbitRadius, rotationSpeed, urlimg} ) => {
     const planetStyle = {
         position: 'fixed',
         left: '50%',
@@ -23,7 +23,7 @@ const Plantes = ({ name, orbitRadius, rotationSpeed} ) => {
         borderRadius:'50%',
         animation: `rotate-${name} ${rotationSpeed}s linear infinite`,
       }
-      const urlimg = `../assets/space/${name}.webp`
+      
   return (
     <div className="contenairplantes">
     <div style={axerotation} >
@@ -39,7 +39,8 @@ const Plantes = ({ name, orbitRadius, rotationSpeed} ) => {
 Plantes.propTypes = {
     name: PropTypes.string.isRequired,
     orbitRadius: PropTypes.number.isRequired,
-    rotationSpeed: PropTypes.number.isRequired
+    rotationSpeed: PropTypes.number.isRequired,
+    urlimg: PropTypes.string.isRequired,
 };
 
 export default Plantes;
