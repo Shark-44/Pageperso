@@ -13,8 +13,7 @@ const SolarSystem = ({vitesse}) => {
       <Planet name="Terre" orbitRadius={150} rotationSpeed={4 * vitesse} />
       <Planet name="Mars" orbitRadius={200} rotationSpeed={8 * vitesse} />
       <Planet name="Jupiter" orbitRadius={250} rotationSpeed={48 * vitesse} />
-      <Planet name="Saturne" orbitRadius={300} rotationSpeed={120 * vitesse} />
-               
+      <Planet name="Saturne" orbitRadius={300} rotationSpeed={120 * vitesse} />        
     </div>
   );
 };

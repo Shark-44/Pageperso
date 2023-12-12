@@ -12,7 +12,7 @@ return(
             systeme Solaire
           </NavLink>
         </ul>
-        <h1> Joanny BERNARDEAU : WEB DEVELLOPEUR</h1>
+        <h1> Joanny BERNARDEAU : WEB DEVELOPPEUR</h1>
         <Dropdown />
 </nav>
 )
