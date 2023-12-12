@@ -23,7 +23,7 @@ const Plantes = ({ name, orbitRadius, rotationSpeed} ) => {
         borderRadius:'50%',
         animation: `rotate-${name} ${rotationSpeed}s linear infinite`,
       }
-      const urlimg = `../src/assets/space/${name}.jpg`
+      const urlimg = `../src/assets/space/${name}.webp`
   return (
     <div className="contenairplantes">
     <div style={axerotation} >
