@@ -5,6 +5,12 @@
     align-items: center;
     justify-content: center;
 }
+.contenairSolar h4{
+    position:absolute;
+    bottom: 20px;
+    left: 22%;
+    color: white;
+}
 .infoplanets{
     position: fixed;
     top:120px;

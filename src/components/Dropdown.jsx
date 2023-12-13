@@ -10,12 +10,13 @@ function Dropdown() {
         setOpen(!open);
       };
       const handleMenuOne = () => {
-           navigate("/HappyEnd")
-           setOpen(false);
+        navigate("/HappyEnd")
+        setOpen(false);
       };
     
       const handleMenuTwo = () => {
-           setOpen(false);
+        navigate("/Infopage")
+        setOpen(false);
       };
       return (
         <div>
@@ -27,7 +28,7 @@ function Dropdown() {
             <button onClick={handleMenuOne}> Le Smiley </button>
           </li>
           <li className="menu-item">
-            <button onClick={handleMenuTwo}>Menu 2</button>
+            <button onClick={handleMenuTwo}>Info Ma page</button>
           </li>
         </ul>
       ) : null}
