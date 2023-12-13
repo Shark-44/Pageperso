@@ -1,6 +1,6 @@
 import "./Dockplanet.css"
 import Jupiter from "../assets/space/Jupiter.webp"
-import Mars from "../assets/space/Mars.webp"
+import Mars from "../assets/space/Marsp.webp"
 import Mercure from "../assets/space/Mercure.webp"
 import Saturne from "../assets/space/Saturne.webp"
 import Terre from "../assets/space/Terre.webp"
