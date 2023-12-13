@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar"
 import SolarSystem from "../components/SolarSystem"
 import Horloge from "../components/Horloge"
 import Accelerator from "../components/Accelerator"
+import Dockplanet from '../components/Dockplanet';
 
 function SystemSolar () {
     const vitesse =[20, 10, 1, 0.5, 0.3]
@@ -18,6 +19,9 @@ function SystemSolar () {
             <SolarSystem vitesse={vitesse[currentIndex]}/>
             <div className="infoplanets">
                 <Horloge />
+            </div>
+            <div className="dock">
+                <Dockplanet />
             </div>
         </div>
     )
