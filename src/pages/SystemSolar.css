@@ -1,6 +1,9 @@
 .contenairSolar {
     background-image: url("../assets/space/space.webp");
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .infoplanets{
     position: fixed;
@@ -16,4 +19,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.dock {
+    position: absolute;
+    bottom: 10px;
+    width: 30%;
+    height: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+.dock :hover {
+    scale: 1.2;
+    border: 2px solid white;
+    border-radius: 5px;
 }

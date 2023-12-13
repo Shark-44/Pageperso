@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import "./Plantes.css"
 
 const Plantes = ({ name, orbitRadius, rotationSpeed, urlimg} ) => {
+  
     const planetStyle = {
         position: 'fixed',
         left: '50%',

@@ -3,11 +3,12 @@ import Sun from './Sun';
 import Planet from './Plantes';
 import "./SolarSystem.css"
 import Jupiter from "../assets/space/Jupiter.webp";
-import Mars from "../assets/space/mars.webp"
-import Mercure from "../assets/space/mercure.webp"
-import Saturne from "../assets/space/saturne.webp"
+import Mars from "../assets/space/Mars.webp"
+import Mercure from "../assets/space/Mercure.webp"
+import Saturne from "../assets/space/Saturne.webp"
 import Terre from "../assets/space/Terre.webp"
 import Venus from "../assets/space/Venus.webp"
+
 const SolarSystem = ({vitesse}) => {
   
   return (
@@ -23,7 +24,7 @@ const SolarSystem = ({vitesse}) => {
   );
 };
 SolarSystem.propTypes = {
-  vitesse: PropTypes.array.isRequired,
+  vitesse: PropTypes.number.isRequired,
 }
 
 export default SolarSystem
