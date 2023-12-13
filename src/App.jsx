@@ -6,7 +6,7 @@ import Accueil from "./pages/Accueil"
 import HappyEnd from "./pages/HappyEnd"
 import SystemSolar from "./pages/SystemSolar"
 import PdfViewer from "./pages/PdfViewer"
-// import html2canvas from 'html2canvas'
+import Infopage from "./pages/Infopage"
 
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
       <Route path="/HappyEnd" element={<HappyEnd />} />
       <Route path="/SystemSolar" element={<SystemSolar />} />
       <Route path="/CvPDF" element={<PdfViewer />} />
+      <Route path="/Infopage" element={<Infopage />} />
     </Routes>
   )
 }
