@@ -1,15 +1,16 @@
 import "./Dockplanet.css"
 import Jupiter from "../assets/space/Jupiter.webp"
 import Mars from "../assets/space/Mars.webp"
-
+import Mercure from "../assets/space/Mercure.webp"
 import Terre from "../assets/space/Terre.webp"
 import Venus from "../assets/space/Venus.webp"
 import Soleil from "../assets/space/Soleil.webp"
 import Uranus from "../assets/space/Uranus.webp"
 import Neptune from "../assets/space/Neptune.webp"
 import Pluton from "../assets/space/Pluton.webp"
+import Saturne from "../assets/space/Saturne.webp"
 function Dockplanet() {
-    const planetImages =[Soleil, Terre, Venus, Terre, Mars, Jupiter, Terre, Uranus, Neptune, Pluton ]
+    const planetImages =[Soleil, Mercure, Venus, Terre, Mars, Jupiter, Saturne, Uranus, Neptune, Pluton ]
 
     const handleInfo = (i) => {
         console.info(i)
