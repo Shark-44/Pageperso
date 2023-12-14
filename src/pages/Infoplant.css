@@ -1,3 +1,17 @@
+
+@font-face {
+    font-family: 'Audiowide-Regular';
+    src: url('../fonts/Audiowide-Regular.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+} 
+.contenaireinfo {
+    padding: 10px;
+   } 
+.textinfo {
+    
+    font-family: "Audiowide-Regular";
+}
 .textp {
     color:aquamarine;
     font-size: 1rem;

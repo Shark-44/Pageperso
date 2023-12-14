@@ -23,7 +23,7 @@ function SystemSolar () {
             <div className="infoplanets">
                 <Horloge />
                 <div className="panel">
-                    <Infoplant infoIndex={infoIndex} />
+                    <Infoplant infoIndex={infoIndex} setInfoIndex={setInfoIndex} />
                 </div>
             </div>
             <h4>Choisissez et cliquez</h4>
