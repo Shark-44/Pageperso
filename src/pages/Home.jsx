@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router"
 import Video from '../components/Video'
 import "./Home.css"
-import fleche from "../assets/fleche.webp"
+import fleche from "../assets/Enter.png"
 function Home () {
     const navigate = useNavigate()
     const changePage = () =>{

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import { useState, useEffect } from 'react';
 import "./Infoplant.css"
 const info = [
     { Type: "Etoile",
@@ -91,43 +92,57 @@ const info = [
       Temp: "De -218 à -200 °C",
       sat: "14",
     },
-    { Type: "Gazeuse",
-      Dist: "2,9 milliards de km",
-      Diametre: "4 fois la Terre",
-      Masse: "15 fois la Terre",
-      Gravite: "90 % de la Terre",
-      Revo: "84 années",
-      Periode: "17h  terrestre",
-      Temp: "De -226 à -197 °C",
-      sat: "27",
+    { Type: "Tellurique",
+      Dist: "5,913 milliards  de km",
+      Diametre: "49 fois moins que la Terre",
+      Masse: "166 fois moins que la Terre",
+      Gravite: "16 % de la Terre",
+      Revo: "248 années",
+      Periode: "6,4 jours terrestre",
+      Temp: "-230 °C",
+      sat: "1",
     }
     ]
 
-function Infoplant({ infoIndex }) {
-    if (infoIndex >= 0 && infoIndex < info.length) {
-        const infopl = info[infoIndex];
+function Infoplant({ infoIndex, setInfoIndex }) {
+    const [displayInfo, setDisplayInfo] = useState(null)
+    useEffect(() => {
+        if (infoIndex >= 0 && infoIndex < info.length) {
+          setDisplayInfo(info[infoIndex]);
+        }
+      }, [infoIndex])
+      useEffect(() => {
+        const timer = setTimeout(() => {
+          setDisplayInfo(null); 
+          setInfoIndex(null);
+        }, 3000);
+    
+        return () => clearTimeout(timer); 
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      }, [displayInfo])
     
         return (
-          <div className="contenaireinfo">
-            <div className="textinfo">
-              <p className="textp">Type : {infopl.Type}</p>
-              <p className="textp">Distance du soleil : {infopl.Dist}</p>
-              <p className="textp">Diametre : {infopl.Diametre}</p>
-              <p className="textp">Masse : {infopl.Gravite}</p>
-              <p className="textp">Revolution autour du soleil : {infopl.Revo}</p>
-              <p className="textp">Période : {infopl.Periode}</p>
-              <p className="textp">Température : {infopl.Temp}</p>
-              <p className="textp">Satéllite : {infopl.sat}</p>
-            </div>
-          </div>
+         <div className="contenaireinfo">
+            {displayInfo ? (
+                <div className="textinfo">
+                    <p className="textp">Type : {displayInfo.Type}</p>
+                    <p className="textp">Distance du soleil : {displayInfo.Dist}</p>
+                    <p className="textp">Diametre : {displayInfo.Diametre}</p>
+                    <p className="textp">Masse : {displayInfo.Gravite}</p>
+                    <p className="textp">Revolution autour du soleil : {displayInfo.Revo}</p>
+                    <p className="textp">Période : {displayInfo.Periode}</p>
+                    <p className="textp">Température : {displayInfo.Temp}</p>
+                    <p className="textp">Satéllite : {displayInfo.sat}</p>
+                </div>
+            ) : (
+                <p className="textp"> Attente de d&apos;informations...</p>
+            )}
+        </div>
         );
-      } else {
-      
-        return <p>Attente de donnée</p>;
-      }
     }
 Infoplant.propTypes = {
     infoIndex: PropTypes.number.isRequired,
+    setInfoIndex: PropTypes.func.isRequired,
 }
 
 export default Infoplant

@@ -17,9 +17,11 @@
 }
 
 #fleche-entree {
+  width: 130px;
+  height: 60px;
   position: absolute;
-  top: 40%;
-  height: 40px;
-  left: 55%; 
+  top: 45%;
+ 
+  left: 80%; 
   transform: translateX(-50%); 
 }

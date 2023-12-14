@@ -6,7 +6,7 @@ function Infopage() {
         <div className="contenairInfo">
         <Navbar />
         <div className="text">
-        <h2>Pourquoi cette se site</h2>
+        <h2>Pourquoi cette ce site</h2>
         <p>Nous sommes début décembre 2023. le pourquoi ... <br /> Je devais me faire un portefolio, montrer ce dont je suis capable. Me faire remarquer par une personne curieuse et désireuse d&apos;en savoir plus sur moi.  <br />L&apos;idée était donc de savoir ce que j&apos;allais y mettre, mais aussi avoir une feuille de route. Montrer que j&apos;évolue,
         avoir l&apos;esprit Dev. <br />
         Mais qu&apos;est-ce que l&apos;esprit Dev? Si en premier lieu un développeur est une personne capable de créer une API pour un client, certains auront une approche visuelle et d&apos;autres se concentreront sur les techniques à mettre en place. Je me situe davantage dans cette seconde catégorie, tout en souhaitant également obtenir un rendu final avec un aspect waouh! <br />
