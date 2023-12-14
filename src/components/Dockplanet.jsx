@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import "./Dockplanet.css"
 import Jupiter from "../assets/space/Jupiter.webp"
 import Mars from "../assets/space/Mars.webp"
@@ -9,7 +10,7 @@ import Uranus from "../assets/space/Uranus.webp"
 import Neptune from "../assets/space/Neptune.webp"
 import Pluton from "../assets/space/Pluton.webp"
 import Saturne from "../assets/space/Saturne.webp"
-function Dockplanet() {
+function Dockplanet({setInfoIndex}) {
     const planetImages =[
         {name:"Soleil",
         src: Soleil,},
@@ -35,6 +36,7 @@ function Dockplanet() {
 
     const handleInfo = (i) => {
         console.info(i)
+        setInfoIndex(i)
     } 
     return(
         <div className="contenairdock">
@@ -50,4 +52,7 @@ function Dockplanet() {
     )
 
 }
+Dockplanet.propTypes = {
+    setInfoIndex: PropTypes.number.isRequired,
+  }
 export default Dockplanet
