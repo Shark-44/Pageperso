@@ -10,20 +10,39 @@ import Neptune from "../assets/space/Neptune.webp"
 import Pluton from "../assets/space/Pluton.webp"
 import Saturne from "../assets/space/Saturne.webp"
 function Dockplanet() {
-    const planetImages =[Soleil, Mercure, Venus, Terre, Mars, Jupiter, Saturne, Uranus, Neptune, Pluton ]
+    const planetImages =[
+        {name:"Soleil",
+        src: Soleil,},
+        {name: "Mercure",
+        src: Mercure,},
+        {name: "Venus", 
+        src: Venus,},
+        {name: "Terre", 
+        src: Terre,},
+        {name: "Mars",
+        src: Mars,},
+        {name: "Jupiter",
+        src: Jupiter,},
+        {name: "Saturne",
+        src: Saturne,},
+        {name: "Uranus",
+        src: Uranus,},
+        {name: "Neptune",
+        src: Neptune,},
+        {name: "Pluton",
+        src: Pluton,}
+    ]
 
     const handleInfo = (i) => {
         console.info(i)
     } 
     return(
         <div className="contenairdock">
-            {planetImages.map((imagePath, i) => {
-                const imageName = imagePath.split('/').pop().split('.')[0];
-
-            return (
+            {planetImages.map((planete, i) => {
+                return (
                 <div key={i} className={`Cardplanets n${i + 1}`} >
-                     <p className="plantname">{imageName}</p> 
-                    <img src={imagePath} alt={imageName} onClick={() => handleInfo(i)}/>
+                     <p className="plantname">{planete.name}</p> 
+                    <img src={planete.src} alt={planete.src} onClick={() => handleInfo(i)}/>
                 </div>
         );
       })}
