@@ -9,7 +9,7 @@
     margin: 5px 0;
     padding: 0;
   
-    border: 1px solid grey;
+    border: 1px solid rgb(4, 242, 4);
     width: 150px;
   }
   
@@ -20,7 +20,7 @@
   }
   
   .menu > li:hover {
-    background-color: lightgray;
+    background-color: #16e87c;
   }
   
   .menu > li > button {
