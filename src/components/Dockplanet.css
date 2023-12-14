@@ -41,6 +41,8 @@
 }
 .Cardplanets:hover .plantname {
     display: block;
+    scale: 1;
+    border: none;
 }
 .plantname {
     display: none;
@@ -49,9 +51,4 @@
     top: -100%; 
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.plantname:hover {
-    color: white;
-    
 }
