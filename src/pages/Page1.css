@@ -1,0 +1,14 @@
+.Contenairpage1 {
+    background-color: blueviolet;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.divpage1{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    scale: 1;
+}
