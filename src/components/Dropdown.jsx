@@ -18,6 +18,10 @@ function Dropdown() {
         navigate("/Infopage")
         setOpen(false);
       };
+      const handleMenuThree = () => {
+        navigate("/Page1")
+        setOpen(false);
+      };
       return (
         <div>
           <button onClick={handleOpen}>Mes essais</button>
@@ -29,6 +33,9 @@ function Dropdown() {
           </li>
           <li className="menu-item">
             <button onClick={handleMenuTwo}>Info Ma page</button>
+          </li>
+          <li className="menu-item">
+            <button onClick={handleMenuThree}>Framer motion page</button>
           </li>
         </ul>
       ) : null}

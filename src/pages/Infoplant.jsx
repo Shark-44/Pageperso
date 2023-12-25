@@ -115,7 +115,7 @@ function Infoplant({ infoIndex, setInfoIndex }) {
         const timer = setTimeout(() => {
           setDisplayInfo(null); 
           setInfoIndex(null);
-        }, 3000);
+        }, 7000);
     
         return () => clearTimeout(timer); 
       // eslint-disable-next-line react-hooks/exhaustive-deps
