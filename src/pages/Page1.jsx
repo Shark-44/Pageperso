@@ -1,23 +1,20 @@
 import "./Page1.css"
 import { Link } from "react-router-dom"
 import { motion } from 'framer-motion'
+import Navbar from "../components/Navbar"
 function Page1() {
-    const circleVariants = {
-        initial: { scale: 0 },
-        animate: { scale: 10},
-      };
     return(
         <motion.div
         className="container"
-        initial="initial"
-        animate="animate"
-        variants={circleVariants}
-        transition={{ duration: 5 }}
-        style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}
-      >
+        initial={{ clipPath: "circle(0% at 50% 50%)" }}
+        animate={{ clipPath: "circle(100%)" }}
+        transition={{ duration: 5}}
+        style={{ background: "black" }}>
+    
         <div className="Contenairpage1">
            <div className="cercle">
-              <Link to="/Page2">vers page 2</Link>  
+           <Navbar />
+              <Link id="test" to="/Page2">vers page 2</Link>  
             </div>
         </div>
         </motion.div>
