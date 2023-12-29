@@ -8,9 +8,12 @@ function Page1() {
         
         <motion.div
         className="container"
-        initial={{ clipPath: "circle(0% at 50% 50%)" }}
-        animate={{ clipPath: "circle(100%)" }}
+        initial={{ WebkitClipPath: "circle(0% at 50% 50%)" }}
+        animate={{ WebkitClipPath: "circle(100%)" }}
         transition={{ duration: 5}}>
+        style={{
+        clipPath: "circle(0% at 50% 50%)", 
+    }}
     
         <div className="Contenairpage1">
            <div className="cercle">
