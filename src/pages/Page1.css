@@ -6,18 +6,15 @@
     align-items: center;
     overflow: hidden;
     background-color: black;
-    background-image: url("src/assets/space/space.webp");
+    /* background-image: url("src/assets/space/space.webp"); */
     
 }
-.container {
-    background-color: black; /* Ajoutez cette ligne */
-    background-image: url("src/assets/space/space.webp"); /* Assurez-vous d'utiliser la même image de fond */
-  }
+
   
 .cercle{
     width: 100%;
     height: 100%;
-    background-color: blue;
+    background-color: rgb(255, 0, 119);
 
 }
 #test {

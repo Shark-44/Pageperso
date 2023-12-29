@@ -4,10 +4,11 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 100%;
-    margin-top: 150px;
+    width: 100%;    
+    background-color: white;
 }
 .contenairAccueil p {
+    margin-top: 150px;
     width: 70vw;
     text-align: center;
     font-size: 2em;
