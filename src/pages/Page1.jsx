@@ -8,7 +8,7 @@ function Page1() {
         
         <motion.div
         className="container"
-        initial={{ WebkitClipPath: "circle(0% at 50% 50%)" }}
+        initial={{ WebkitClipPath: "circle(-20%)" }}
         animate={{ WebkitClipPath: "circle(100%)" }}
         transition={{ duration: 5}}>
     
