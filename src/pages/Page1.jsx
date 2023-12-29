@@ -11,9 +11,6 @@ function Page1() {
         initial={{ WebkitClipPath: "circle(0% at 50% 50%)" }}
         animate={{ WebkitClipPath: "circle(100%)" }}
         transition={{ duration: 5}}>
-        style={{
-        clipPath: "circle(0% at 50% 50%)", 
-    }}
     
         <div className="Contenairpage1">
            <div className="cercle">
