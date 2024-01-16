@@ -25,7 +25,7 @@ function Accueil() {
         <>
         <Navbar />
         <div className="contenairAccueil">
-        <LanguageSwitcher />
+            <LanguageSwitcher />
             <p>{t('helloMessage')}</p>
             <p>{t('recherche')}</p>
             <h5>{t('cv')}</h5>

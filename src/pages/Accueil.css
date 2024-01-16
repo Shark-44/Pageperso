@@ -8,7 +8,6 @@
     background-color: white;
 }
 .contenairAccueil p {
-    margin-top: 150px;
     width: 70vw;
     text-align: center;
     font-size: 2em;
@@ -27,8 +26,18 @@
     display: flex;
     gap: 10px;
     margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .lestechno img {
     width:300px;
     height: 250px;
+}
+
+@media only screen and (max-width : 900px) {
+    .lestechno {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
 }
