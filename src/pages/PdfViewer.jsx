@@ -1,8 +1,9 @@
 
 // import PropTypes from 'prop-types';
 import "./PdfViewer.css"
-import Viewer, { Worker } from '@phuocng/react-pdf-viewer';
-import '@phuocng/react-pdf-viewer/cjs/react-pdf-viewer.css';
+import { Viewer, Worker} from '@react-pdf-viewer/core';
+import '@react-pdf-viewer/core/lib/styles/index.css'
+
 
 import mypdf from "../PDF/CVJoanny.pdf"
 import '../styles/index.css'
