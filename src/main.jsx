@@ -5,6 +5,19 @@ import App from './App.jsx'
 import './index.css'
 import { I18nextProvider } from 'react-i18next'
 import i18n from "./Translate/i18n.jsx"
+function forceLandscape() {
+  if (window.innerWidth < 900) {
+    if (window.screen.orientation !== 90 && window.screen.orientation !== -90) {
+     
+      screen.orientation.lock('landscape').catch(function (error) {
+        console.error('Could not lock orientation: ', error);
+      });
+    }
+  }
+}
+console.info(forceLandscape)
+window.addEventListener('load', forceLandscape);
+window.addEventListener('resize', forceLandscape)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

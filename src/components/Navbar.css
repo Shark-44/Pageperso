@@ -11,6 +11,15 @@
     z-index: 100;
    
 }
+.navul {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
 .navGlobal h1 {
     display: flex;
     font-size: 1.4em;
@@ -24,7 +33,7 @@
     line-height: 25px;
     letter-spacing: -0.13px;
     text-decoration: none;
-    margin-left: 2.5rem;
+    margin-left: 2rem;
     transition: all 0.5s ease;
   }
   

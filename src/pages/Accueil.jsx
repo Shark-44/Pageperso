@@ -1,5 +1,6 @@
 import "./Accueil.css";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
+import { useEffect } from "react"
 import Navbar from "../components/Navbar"
 import LanguageSwitcher from '../components/LanguageSwitcher'
 import Footer from "../components/Footer"
@@ -11,13 +12,20 @@ import logoJava from "../assets/Javascript.png"
 
 
 function Accueil() {
-    const { t } = useTranslation();
- 
+    const { t, i18n } = useTranslation();
+    useEffect(() => {
+       
+        const userLanguage = navigator.language || navigator.userLanguage;
+
+        if (i18n.language !== userLanguage) {
+            i18n.changeLanguage(userLanguage);
+        }
+    }, [i18n]);
     return (
         <>
         <Navbar />
         <div className="contenairAccueil">
-        <LanguageSwitcher />
+            <LanguageSwitcher />
             <p>{t('helloMessage')}</p>
             <p>{t('recherche')}</p>
             <h5>{t('cv')}</h5>

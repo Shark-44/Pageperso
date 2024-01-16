@@ -4,7 +4,7 @@ import Dropdown from "./Dropdown"
 function Navbar () {
 return(
     <nav className="navGlobal">
-        <ul >
+        <ul className="navul">
           <NavLink className="nav-item" to="/Accueil">
             Accueil
           </NavLink>
