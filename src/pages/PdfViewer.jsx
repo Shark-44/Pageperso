@@ -8,7 +8,7 @@ import '@react-pdf-viewer/core/lib/styles/index.css';
 import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 
 
-import mypdf from "../PDF/CVJoanny.pdf"
+import mypdf from "./CVJoanny.pdf"
 
 
 
