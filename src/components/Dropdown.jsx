@@ -22,6 +22,10 @@ function Dropdown() {
         navigate("/Page1")
         setOpen(false);
       };
+      const handleMenuFour = () => {
+        navigate("/StarWars")
+        setOpen(false);
+      };
       return (
         <div>
           <button onClick={handleOpen}>Mes essais</button>
@@ -32,10 +36,13 @@ function Dropdown() {
             <button onClick={handleMenuOne}> Le Smiley </button>
           </li>
           <li className="menu-item">
-            <button onClick={handleMenuTwo}>Info Ma page</button>
+            <button onClick={handleMenuThree}>Framer motion page</button>
           </li>
           <li className="menu-item">
-            <button onClick={handleMenuThree}>Framer motion page</button>
+            <button onClick={handleMenuFour}>Star Wars</button>
+          </li>
+          <li className="menu-item">
+            <button onClick={handleMenuTwo}>Info Ma page</button>
           </li>
         </ul>
       ) : null}

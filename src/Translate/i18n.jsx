@@ -10,7 +10,7 @@ i18n
                 translation: {
                     helloMessage: "Bonjour je me prénomme Joanny, passé 50 ans j'ai voulu découvrir le code. Si au départ c'était par culture générale, j'ai découvert une passion et je veux en faire mon métier. Oui, mon ambition est d'apprendre encore plus et devenir quelqu'un qui maîtrise.",
                     recherche: "Actuellement je recherche une entreprise qui peut m'accompagner au titre de Bachelor Concepteur Développeur d'Applications",
-                    cv: "Coordonnées sur CV qui est telechargeable sur GitHUB en bas...",
+                    cv: "Coordonnées sur CV en bas ...",
                     title1: "Mon parcours",
                     text1: "J'ai commencé ma carrière en tant qu'électromécanicien dans l'aéronavale (8 ans). Une des plus belle expérience humaine",
                     text2: "Ensuite 20 ans dans le milieu industriel. J'ai découvert différents aspects dans ce métier. Il y a des méthodes qui me permettra de basculer d&apos;un monde à l'autre et cet aspect commercial. Car il faut bien vendre un savoir faire",
