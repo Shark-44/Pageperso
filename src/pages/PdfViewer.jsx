@@ -17,7 +17,8 @@ const PdfViewer = () => {
   
 
   return (
-    <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.js">
+    <div className="pdfviewer">
+      <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.js">
         <div style={{ height: '750px' }}>
             <Viewer
                 fileUrl={mypdf}
@@ -26,7 +27,8 @@ const PdfViewer = () => {
                 ]}
             />
         </div>
-    </Worker>
+      </Worker>
+    </div>
   );
 };
 
