@@ -19,7 +19,11 @@
     background-size: cover;
 }
 .text {
-   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 620px;
     border: 5px solid black;
     position: fixed; /* Utilisation de position absolue */
     top: 20%; /* Positionnement par rapport au conteneur parent */
