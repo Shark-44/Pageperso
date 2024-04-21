@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Nature() {
     function changeH4Content(boxIndex) {
+        console.log(boxIndex)
         let newText = "";
         switch (boxIndex) {
           case 1:
@@ -30,20 +31,25 @@ function Nature() {
         changeH4Content(1);
         const boxes = document.querySelectorAll(".box");
         boxes.forEach((box, index) => {
-    
+          box.setAttribute("data-index", index + 1);
+      
           ScrollTrigger.create({
             trigger: box,
-            start: "top 30%",
-            /*end: "top 50%",*/
-            onEnter: () => changeH4Content(index + 1),
+            start: "top 40%",
+            onEnter: () => {
+              const boxIndex = parseInt(box.getAttribute("data-index"));
+              changeH4Content(boxIndex);
+            },
             onLeaveBack: () => {
-              if (index - 1 >= 1) {
-                changeH4Content(index - 1);
+              const boxIndex = parseInt(box.getAttribute("data-index"));
+              if (boxIndex !== 1) {
+                changeH4Content(boxIndex - 1);
               }
-              },
-            });
+            },
           });
-        }, []);
+        });
+      }, []);
+      
         
   return (
     <>
