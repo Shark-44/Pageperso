@@ -10,6 +10,7 @@ import Infopage from "./pages/Infopage"
 import Page1 from "./pages/Page1"
 import Page2 from "./pages/Page2"
 import StarWars from "./pages/StarWars"
+import Nature from "./pages/Nature"
 
 import { AnimatePresence } from 'framer-motion'
 import { useLocation } from 'react-router-dom'
@@ -31,6 +32,7 @@ function App() {
         <Route path="/Page1" element={<Page1 />} />
         <Route path="/Page2" element={<Page2 />} />
         <Route path="/StarWars" element={<StarWars />} />
+        <Route path="/Nature" element={<Nature />} />
       </Routes>
     </AnimatePresence>
   )

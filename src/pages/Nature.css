@@ -1,0 +1,30 @@
+.box {
+    height: 800px;
+    width: 100%;
+    overflow-y: auto;
+}
+.b1 {
+    background-image: url("../assets/images/dolphin.webp");
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.b2 {
+    background-image: url("../assets/images/turtle.webp");
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.b3 {
+    background-image: url("../assets/images/fish.webp");
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.text {
+   
+    border: 5px solid black;
+    position: fixed; /* Utilisation de position absolue */
+    top: 20%; /* Positionnement par rapport au conteneur parent */
+    left: 50%; /* Positionnement par rapport au conteneur parent */
+    transform: translate(-50%, -50%); /* Centrage */
+    padding: 60px;
+    font-size: 10em;
+}

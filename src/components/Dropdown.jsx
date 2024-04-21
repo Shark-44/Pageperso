@@ -26,6 +26,10 @@ function Dropdown() {
         navigate("/StarWars")
         setOpen(false);
       };
+      const handleMenuFive = () => {
+        navigate("/Nature")
+        setOpen(false);
+      };
       return (
         <div>
           <button onClick={handleOpen}>Mes essais</button>
@@ -40,6 +44,9 @@ function Dropdown() {
           </li>
           <li className="menu-item">
             <button onClick={handleMenuFour}>Star Wars</button>
+          </li>
+          <li className="menu-item">
+            <button onClick={handleMenuFive}>Effet sur image</button>
           </li>
           <li className="menu-item">
             <button onClick={handleMenuTwo}>Info Ma page</button>
