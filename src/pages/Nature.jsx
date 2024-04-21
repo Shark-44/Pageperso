@@ -35,7 +35,6 @@ function Nature() {
       
           ScrollTrigger.create({
             trigger: box,
-            markers: true,
             start: "top 40%",
             onEnter: () => {
               const boxIndex = parseInt(box.getAttribute("data-index"));
