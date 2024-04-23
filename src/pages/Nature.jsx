@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Navbar from "../components/Navbar";
 import Horiscroll from "../components/Horiscroll";
+import Transvideo from "../components/Transvideo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,6 +80,9 @@ function Nature() {
                 Ainsi de comprendre des mécanismes et continuer a développer  </p>
               <Horiscroll />
               <p> 2iéme effet Je n&apos;ai pas ajouté d&apos;images mais je les ai symbolisées par des rectangles</p>
+            </div>
+            <div className="contenairevideotrans">
+                <Transvideo />
             </div>
         </>
     );
