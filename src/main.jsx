@@ -15,7 +15,7 @@ function forceLandscape() {
     }
   }
 }
-console.info(forceLandscape)
+
 window.addEventListener('load', forceLandscape);
 window.addEventListener('resize', forceLandscape)
 
