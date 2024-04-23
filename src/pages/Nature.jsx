@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Navbar from "../components/Navbar";
 import Horiscroll from "../components/Horiscroll";
-import Transvideo from "../components/transvideo";
+import Transvideo from "../components/Transvideo";
 
 gsap.registerPlugin(ScrollTrigger);
 
