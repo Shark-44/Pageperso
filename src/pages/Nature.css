@@ -40,5 +40,8 @@
     margin-left: 10%;
 }
 .contenairevideotrans {
-    height: 1500px;
+    height: 900px;
+}
+.contenairevideotrans p {
+    margin-left: 10%
 }

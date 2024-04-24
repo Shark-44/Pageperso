@@ -1,4 +1,5 @@
 import "./Transvideo.css"
+import aquarium from "../assets/images/aquarium.webp"
 
 import Videotrans from "./Videotrans";
 
@@ -13,29 +14,36 @@ function Transvideo () {
       gsap.registerPlugin(ScrollTrigger);
   
 
-      gsap.to(containerTRef.current.querySelector('.t1'), {
+   gsap.to(containerTRef.current.querySelector('.transt1'), {
         scale: 0.5,
         duration: 3,
         scrollTrigger: {
             trigger: containerTRef.current,
             toggleActions: "restart reverse play reverse",
-            start: "top -10%",
-            end: "bottom -20%",
+            start: "top -20px",
+            end: "bottom 20px",
+            markers:true,
             scrub: true,
-            markers: true,
             pin: true,
-              
         }
-    });
-  
+        });  
+        gsap.to(containerTRef.current.querySelector('.transt2'), {
+            y: -820,
+            scrollTrigger: {
+                trigger: containerTRef.current,
+                start: "top 100px",
+                end: "bottom 20px",
+                scrub: true,
+               }
+            });  
  
     }, []);
     return (
         <div className="transition" ref={containerTRef} >
-            <div className="trans t1">
+            <div className="transt1">
                 <Videotrans />
             </div>
-            <div className="trans t2" >Je travaille sur ce 3ieme effet de la video diminuant et que je vais passer par une image</div>
+            <div className="transt2" ><img src={aquarium} alt="" /></div>
         </div>
 
     )
