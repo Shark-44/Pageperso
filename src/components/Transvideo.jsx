@@ -22,7 +22,6 @@ function Transvideo () {
             toggleActions: "restart reverse play reverse",
             start: "top -20px",
             end: "bottom 20px",
-            markers:true,
             scrub: true,
             pin: true,
         }
