@@ -30,8 +30,8 @@ function Transvideo () {
             y: -820,
             scrollTrigger: {
                 trigger: containerTRef.current,
-                start: "bottom 20px",
-                end: "bottom 5px",
+                start: "top 200px",
+                end: "bottom 20px",
                 scrub: true,
                }
             });  
