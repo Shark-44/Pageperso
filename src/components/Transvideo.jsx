@@ -13,33 +13,27 @@ function Transvideo () {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        const animation1 = gsap.to(containerTRef.current.querySelector('.transt1'), {
-            scale: 0.5,
-            duration: 3,
+        gsap.set(".transt1", { scale: 0 });
+        gsap.set(".transt2", { y: 0 });
+
+        const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: containerTRef.current,
                 toggleActions: "restart reverse play reverse",
                 start: "top -10px",
-                end: "bottom 200px",
+                end: "bottom 20px",
                 scrub: true,
                 pin: true,
+                markers:true,
             }
         });
 
 
-        animation1.eventCallback("onComplete", () => {
-            gsap.to(containerTRef.current.querySelector('.transt2'), {
-                y: -820,
-                scrollTrigger: {
-                    trigger: containerTRef.current,
-                    start: "top 400px",
-                    end: "bottom 20px",
-                    scrub: true,
-                }
-            });
-        });
+        tl.from(".transt1", {scale: 0.7});
+        tl.to(".transt2", {y: -725});
 
     }, []);
+    
     return (
         <div className="transition" ref={containerTRef} >
             <div className="transt1">
