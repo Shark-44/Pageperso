@@ -17,7 +17,7 @@ function Transvideo () {
         const scaleValue = window.innerWidth * 0.6 / 100;
         setScaleValue(scaleValue);
 
-        gsap.set(".transt1", { scale: scaleValue });
+        gsap.set(".transt1", { scale: 1 });
         gsap.set(".transt2", { y: 0 });
 
         const tl = gsap.timeline({
@@ -32,7 +32,7 @@ function Transvideo () {
         });
 
 
-        tl.from(".transt1", {scale: 1});
+        tl.from(".transt1", {scale: scaleValue});
         tl.to(".transt2", {y: -725});
 
     }, []);
