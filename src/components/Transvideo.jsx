@@ -11,31 +11,34 @@ function Transvideo () {
     const containerTRef = useRef(null);
 
     useEffect(() => {
-      gsap.registerPlugin(ScrollTrigger);
-  
+        gsap.registerPlugin(ScrollTrigger);
 
-   gsap.to(containerTRef.current.querySelector('.transt1'), {
-        scale: 0.5,
-        duration: 3,
-        scrollTrigger: {
-            trigger: containerTRef.current,
-            toggleActions: "restart reverse play reverse",
-            start: "top -10px",
-            end: "bottom 200px",
-            scrub: true,
-            pin: true,
-        }
-        });  
-        gsap.to(containerTRef.current.querySelector('.transt2'), {
-            y: -820,
+        const animation1 = gsap.to(containerTRef.current.querySelector('.transt1'), {
+            scale: 0.5,
+            duration: 3,
             scrollTrigger: {
                 trigger: containerTRef.current,
-                start: "top 400px",
-                end: "bottom 20px",
+                toggleActions: "restart reverse play reverse",
+                start: "top -10px",
+                end: "bottom 200px",
                 scrub: true,
-               }
-            });  
- 
+                pin: true,
+            }
+        });
+
+
+        animation1.eventCallback("onComplete", () => {
+            gsap.to(containerTRef.current.querySelector('.transt2'), {
+                y: -820,
+                scrollTrigger: {
+                    trigger: containerTRef.current,
+                    start: "top 400px",
+                    end: "bottom 20px",
+                    scrub: true,
+                }
+            });
+        });
+
     }, []);
     return (
         <div className="transition" ref={containerTRef} >
