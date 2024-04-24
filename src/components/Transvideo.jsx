@@ -13,7 +13,7 @@ function Transvideo () {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.set(".transt1", { scale: 1});
+        gsap.set(".transt1", { scale: 0.6});
         gsap.set(".transt2", { y: 0 });
 
         const tl = gsap.timeline({
@@ -29,7 +29,7 @@ function Transvideo () {
         });
 
 
-        tl.from(".transt1", {scale: 0.7});
+        tl.from(".transt1", {scale: 1});
         tl.to(".transt2", {y: -725});
 
     }, []);
