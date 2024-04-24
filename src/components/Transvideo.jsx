@@ -17,14 +17,14 @@ function Transvideo () {
 
 
         gsap.set(".transt1", { scale: 0.6 });
-        gsap.set(".transt2", { y: 0 });
+        gsap.set(".transt2", { yPercent: 0 });
 
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: containerTRef.current,
                 toggleActions: "restart reverse play reverse",
                 start: "top -20px",
-                end: "bottom 20px",
+                end: "bottom 20%",
                 scrub: true,
                 pin: true,
             }
@@ -32,7 +32,7 @@ function Transvideo () {
 
 
         tl.from(".transt1", {scale: 1});
-        tl.to(".transt2", {y: -725});
+        tl.to(".transt2", {yPercent: -130});
 
     }, []);
 
