@@ -22,7 +22,6 @@ function Transvideo () {
             toggleActions: "restart reverse play reverse",
             start: "top -20px",
             end: "bottom 20px",
-            markers:true,
             scrub: true,
             pin: true,
         }
@@ -31,8 +30,8 @@ function Transvideo () {
             y: -820,
             scrollTrigger: {
                 trigger: containerTRef.current,
-                start: "top 100px",
-                end: "bottom 20px",
+                start: "bottom 20px",
+                end: "bottom 5px",
                 scrub: true,
                }
             });  
