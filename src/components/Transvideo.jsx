@@ -20,8 +20,8 @@ function Transvideo () {
         scrollTrigger: {
             trigger: containerTRef.current,
             toggleActions: "restart reverse play reverse",
-            start: "top -20px",
-            end: "bottom 20px",
+            start: "top -10px",
+            end: "bottom 200px",
             scrub: true,
             pin: true,
         }
@@ -30,7 +30,7 @@ function Transvideo () {
             y: -820,
             scrollTrigger: {
                 trigger: containerTRef.current,
-                start: "top 200px",
+                start: "top 400px",
                 end: "bottom 20px",
                 scrub: true,
                }
