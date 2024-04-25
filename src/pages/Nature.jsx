@@ -1,7 +1,7 @@
 import "./Nature.css";
 
 import { useEffect } from "react";
-import { gsap } from "gsap";
+import  gsap  from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Navbar from "../components/Navbar";
