@@ -11,14 +11,26 @@ function Horiscroll () {
     useEffect(() => {
       gsap.registerPlugin(ScrollTrigger);
   
-      gsap.to(containerRef.current, {
+      gsap.to(containerRef.current.querySelector('.z1'), {
         x:-700,
         duration:3,
         scrollTrigger: {
           trigger: containerRef.current,
           toggleActions: "restart reverse play reverse",
-          start: "top 70%",
-          end: "bottom 70%",
+          start: "top 10px",
+          end: "bottom -30px",
+          scrub: true,
+     
+        }
+      });
+      gsap.to(containerRef.current.querySelector('.z3'), {
+        x:-750,
+        duration:3,
+        scrollTrigger: {
+          trigger: containerRef.current,
+          toggleActions: "restart reverse play reverse",
+          start: "top 10px",
+          end: "bottom -30px",
           scrub: true,
          
         }
@@ -29,8 +41,8 @@ function Horiscroll () {
         scrollTrigger: {
             trigger: containerRef.current,
             toggleActions: "restart reverse play reverse",
-            start: "top 70%",
-            end: "bottom 70%",
+            start: "top 10px",
+            end: "bottom -30px",
             scrub: true,
       
         }
