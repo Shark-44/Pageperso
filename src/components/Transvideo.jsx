@@ -4,7 +4,7 @@ import aquarium from "../assets/images/aquarium.webp"
 import Videotrans from "./Videotrans";
 
 import  { useRef, useEffect } from 'react';
-import { gsap } from "gsap";
+import  gsap  from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function Transvideo () {
