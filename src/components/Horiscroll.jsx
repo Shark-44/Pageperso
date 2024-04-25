@@ -17,7 +17,7 @@ function Horiscroll () {
         scrollTrigger: {
           trigger: containerRef.current,
           toggleActions: "restart reverse play reverse",
-          start: "top 10px",
+          start: "top 30%",
           end: "bottom -30px",
           scrub: true,
      
@@ -29,7 +29,7 @@ function Horiscroll () {
         scrollTrigger: {
           trigger: containerRef.current,
           toggleActions: "restart reverse play reverse",
-          start: "top 10px",
+          start: "top 30%",
           end: "bottom -30px",
           scrub: true,
          
@@ -41,7 +41,7 @@ function Horiscroll () {
         scrollTrigger: {
             trigger: containerRef.current,
             toggleActions: "restart reverse play reverse",
-            start: "top 10px",
+            start: "top 30%",
             end: "bottom -30px",
             scrub: true,
       
