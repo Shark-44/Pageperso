@@ -1,3 +1,9 @@
+.contenairEffet {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: auto;
+}
 .box {
     height: 800px;
     width: 100%;
