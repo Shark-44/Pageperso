@@ -1,8 +1,9 @@
 import "./Nature.css";
 
-import { useEffect } from "react";
+
 import  gsap  from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 import Navbar from "../components/Navbar";
 import Horiscroll from "../components/Horiscroll";
@@ -30,7 +31,7 @@ function Nature() {
         document.querySelector(".box h4.text").textContent = newText;
     }
 
-    useEffect(() => {
+    useGSAP(() => {
         changeH4Content(1);
         const boxes = document.querySelectorAll(".box");
         boxes.forEach((box, index) => {
@@ -65,7 +66,7 @@ function Nature() {
     }, []);
 
     return (
-        <>
+      <div className="contenairEffet">
             <Navbar />
             <div className="contenairimage">
                 <div className="box b1">
@@ -77,7 +78,7 @@ function Nature() {
             <div className="contenairtest">
                 <h2>Cette page</h2>
                 <p>Comme la page <a href="https://www.apple.com/fr/apple-tv-4k/" target="_blank" rel="noreferrer" >Apple TV 4K </a>, j&apos;ai voulu travailler sur une section a travers GSAP Scrolltrigger. Je n&apos;ai pas enclenché de vidéo mais joué sur des textes.<br />
-                Ainsi de comprendre des mécanismes et continuer a développer  </p>
+                Ainsi de comprendre des mécanismes et continuer a développer. Actualiser la page pour que les effets fonctionnent, je cherche une solution</p>
                 <Horiscroll />
                 <p> 2iéme effet Je n&apos;ai pas ajouté d&apos;images mais je les ai symbolisées par des rectangles</p>
             </div>
@@ -86,7 +87,7 @@ function Nature() {
                 <Transvideo />
                 
             </div>
-        </>
+        </div>
     );
 }
 

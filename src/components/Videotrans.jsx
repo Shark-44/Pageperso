@@ -15,6 +15,7 @@ function Videotrans () {
           playing= 'true'
           muted= 'true'
           loop= 'true'
+          autoPlay= 'true'
         />
         
       </div>
