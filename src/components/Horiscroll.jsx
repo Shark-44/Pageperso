@@ -9,47 +9,55 @@ function Horiscroll () {
     const containerRef = useRef(null);
 
     useEffect(() => {
-      gsap.registerPlugin(ScrollTrigger);
-  
-      gsap.to(containerRef.current.querySelector('.z1'), {
-        x:-700,
-        duration:3,
-        scrollTrigger: {
-          trigger: containerRef.current,
-          toggleActions: "restart reverse play reverse",
-          start: "top 30%",
-          end: "bottom -30px",
-          scrub: true,
-     
-        }
-      });
-      gsap.to(containerRef.current.querySelector('.z3'), {
-        x:-750,
-        duration:3,
-        scrollTrigger: {
-          trigger: containerRef.current,
-          toggleActions: "restart reverse play reverse",
-          start: "top 30%",
-          end: "bottom -30px",
-          scrub: true,
-         
-        }
-      });
-      gsap.to(containerRef.current.querySelector('.z2'), {
-        x: 1400,
-        duration: 3,
-        scrollTrigger: {
-            trigger: containerRef.current,
-            toggleActions: "restart reverse play reverse",
-            start: "top 30%",
-            end: "bottom -30px",
-            scrub: true,
-      
-        }
-    });
-  
- 
-    }, []);
+      const createScrollTriggers = () => {
+          gsap.registerPlugin(ScrollTrigger);
+
+          gsap.to(containerRef.current.querySelector('.z1'), {
+              x: -700,
+              duration: 3,
+              scrollTrigger: {
+                  trigger: containerRef.current,
+                  toggleActions: "restart reverse play reverse",
+                  start: "top 30%",
+                  end: "bottom -30px",
+                  scrub: true,
+              }
+          });
+
+          gsap.to(containerRef.current.querySelector('.z3'), {
+              x: -750,
+              duration: 3,
+              scrollTrigger: {
+                  trigger: containerRef.current,
+                  toggleActions: "restart reverse play reverse",
+                  start: "top 30%",
+                  end: "bottom -30px",
+                  scrub: true,
+              }
+          });
+
+          gsap.to(containerRef.current.querySelector('.z2'), {
+              x: 1400,
+              duration: 3,
+              scrollTrigger: {
+                  trigger: containerRef.current,
+                  toggleActions: "restart reverse play reverse",
+                  start: "top 30%",
+                  end: "bottom -30px",
+                  scrub: true,
+              }
+          });
+      };
+
+
+      const timeoutId = setTimeout(() => {
+          createScrollTriggers();
+      }, 80);
+
+
+      return () => clearTimeout(timeoutId);
+  }, []);
+
     return (
         <div className="contenairehoriz" ref={containerRef}>
             <div className="zone z1" >

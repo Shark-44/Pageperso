@@ -1,79 +1,71 @@
-import "./Nature.css";
 
-
-import  gsap  from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+import  { useEffect, useRef } from 'react';
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 import Navbar from "../components/Navbar";
 import Horiscroll from "../components/Horiscroll";
 import Transvideo from "../components/Transvideo";
-
-gsap.registerPlugin(ScrollTrigger);
+import "./Nature.css";
 
 function Nature() {
-    function changeH4Content(boxIndex) {
-        console.log(boxIndex);
-        let newText = "";
-        switch (boxIndex) {
-            case 1:
-                newText = "Dauphin";
-                break;
-            case 2:
-                newText = "Tortue";
-                break;
-            case 3:
-                newText = "Poisson";
-                break;
-            default:
-                newText = "Dauphin";
-        }
-        document.querySelector(".box h4.text").textContent = newText;
-    }
+    const alphabetUIRef = useRef();
 
-    useGSAP(() => {
-        changeH4Content(1);
-        const boxes = document.querySelectorAll(".box");
-        boxes.forEach((box, index) => {
-            box.setAttribute("data-index", index + 1);
+    useEffect(() => {
 
-            ScrollTrigger.create({
-                trigger: box,
-                start: "top 40%",
-                onEnter: () => {
-                    const boxIndex = parseInt(box.getAttribute("data-index"));
-                    changeH4Content(boxIndex);
-                },
-                onLeaveBack: () => {
-                    const boxIndex = parseInt(box.getAttribute("data-index"));
-                    if (boxIndex !== 1) {
-                        changeH4Content(boxIndex - 1);
-                    }
+        const createScrollTriggers = () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            const listItems = document.querySelectorAll(".inner_listing");
+
+            listItems.forEach((item) => {
+                ScrollTrigger.create({
+                    trigger: item,
+                    start: "top 50%",
+              end: "bottom 60%",
+
+                    onEnter: () => {
+                        const text = item.getAttribute('data-text');
+                        gsap.set(alphabetUIRef.current, { textContent: text });
+                    },
+                    onEnterBack: () => {
+                        const text = item.getAttribute('data-text');
+                        gsap.set(alphabetUIRef.current, { textContent: text });
+                    },
+                });
+            });
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".contenairtest",
+                    start: "top bottom",
+                    toggleActions: "play none none reverse",
                 },
             });
-        });
+    
+            tl.to(".alphabet_ui", { opacity: 0, duration: 0.2 });
+        };
 
 
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".contenairtest",
-                start: "top bottom",
-                toggleActions: "play none none reverse",
-            },
-        });
+       
+        const timeoutId = setTimeout(() => {
+            createScrollTriggers();
+        }, 80);
 
-        tl.to(".text", { opacity: 0, duration: 0.2 });
+
+        return () => clearTimeout(timeoutId);
+        
     }, []);
 
     return (
-      <div className="contenairEffet">
+        <div className="contenairEffet">
             <Navbar />
             <div className="contenairimage">
-                <div className="box b1">
-                    <h4 className="text"></h4>
+                <h4 className="alphabet_ui" ref={alphabetUIRef}></h4>
+                <div className="listop">
+                    <div className="inner_listing" id="b1" data-text="Dauphin"></div>
+                    <div className="inner_listing" id="b2" data-text="Tortue"></div>
+                    <div className="inner_listing" id="b3" data-text="Poisson"></div>
                 </div>
-                <div className="box b2"></div>
-                <div className="box b3"></div>
             </div>
             <div className="contenairtest">
                 <h2>Cette page</h2>
