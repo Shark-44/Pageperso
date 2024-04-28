@@ -1,30 +1,33 @@
 .contenairEffet {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    height: auto;
+    position: relative;
+    height: auto; /* Utilisez une hauteur auto pour s'adapter au contenu */
 }
-.box {
+
+.inner_listing {
     height: 800px;
-    width: 100%;
-    overflow-y: auto;
+    width: 100%; /* Assurez-vous que la largeur des éléments est à 100% */
 }
-.b1 {
+
+/* Ajoutez les styles de fond aux éléments .inner_listing */
+#b1 {
     background-image: url("../assets/images/dolphin.webp");
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
 }
-.b2 {
+
+#b2 {
     background-image: url("../assets/images/turtle.webp");
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
 }
-.b3 {
+
+#b3 {
     background-image: url("../assets/images/fish.webp");
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
 }
-.text {
+
+.alphabet_ui {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +35,7 @@
     width: 620px;
     border: 5px solid black;
     position: fixed; 
-    top: 20%; 
+    top: 30%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
     padding: 60px;
@@ -46,7 +49,7 @@
     margin-left: 10%;
 }
 .contenairevideotrans {
-    height: 1500px;
+    height: 3000px;
 }
 .contenairevideotrans p {
     margin-left: 10%
