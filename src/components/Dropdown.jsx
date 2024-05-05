@@ -30,6 +30,10 @@ function Dropdown() {
         navigate("/Nature")
         setOpen(false);
       };
+      const handleMenuSix = () => {
+        navigate("/Effets")
+        setOpen(false);
+      };
       return (
         <div>
           <button onClick={handleOpen}>Mes essais</button>
@@ -40,13 +44,16 @@ function Dropdown() {
             <button onClick={handleMenuOne}> Le Smiley </button>
           </li>
           <li className="menu-item">
-            <button onClick={handleMenuThree}>Framer motion page</button>
+            <button onClick={handleMenuThree}>Framer motion</button>
           </li>
           <li className="menu-item">
             <button onClick={handleMenuFour}>Star Wars</button>
           </li>
           <li className="menu-item">
-            <button onClick={handleMenuFive}>Effet sur image</button>
+            <button onClick={handleMenuFive}>Travail avec GSAP</button>
+          </li>
+          <li className="menu-item">
+            <button onClick={handleMenuSix}>Travail effets d&apos;un site</button>
           </li>
           <li className="menu-item">
             <button onClick={handleMenuTwo}>Info Ma page</button>
