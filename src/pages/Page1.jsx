@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { motion } from 'framer-motion'
 import Navbar from "../components/Navbar"
 function Page1() {
-    document.body.style.backgroundColor = 'black'
+    
     return(
         <motion.div
         className="container"
