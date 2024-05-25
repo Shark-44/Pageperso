@@ -37,28 +37,5 @@
     height: 450px;
     width: 250px;
   }
-  .testsvg {
-    display: flex;
-    margin-top: 200px;
-    flex-direction: column;
-    align-items: center;
-  }
-  .testsvg p {
-    display: block;
-    text-align: center;
-  }
-  .clip-path {
-    transition: d 2s linear;
-  }
-  
-  .clip-path.rect {
-    d: path('M0 90 Q125 90, 250 90 L250 450 C125 450, 0 450, 0 450 Z');
-  }
-  
-  button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
+
   

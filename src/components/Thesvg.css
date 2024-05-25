@@ -1,0 +1,30 @@
+.thesvg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.clip-path {
+    transition: d 2s linear;
+  }
+  
+  .clip-path.rect {
+    d: path('M20 90 Q125 180, 230 90 Q230 270, 230 450 C125 540, 20 450, 20 450 Q20 270, 20 90 Z');
+  }
+  
+  .clip-path.rect2 {
+    d: path('M20 90 Q125 0, 230 90 Q230 270, 230 450 C125 360, 20 450, 20 450 Q20 270, 20 90 Z');
+  }
+  .clip-path.rect3 {
+    d: path('M20 90 Q125 90, 230 90 Q190 270, 230 450 C125 450, 20 450, 20 450 Q-20 270, 20 90 Z');
+  }
+  .clip-path.rect4 {
+    d: path('M20 90 Q125 90, 230 90 Q270 270, 230 450 C125 450, 20 450, 20 450 Q60 270, 20 90 Z');
+  }
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
