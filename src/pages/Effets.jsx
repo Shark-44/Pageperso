@@ -1,6 +1,7 @@
 import './Effets.css';
 import { useState, useRef } from "react";
 import Navbar from "../components/Navbar";
+import Thesvg from '../components/Thesvg';
 
 function Effets() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -40,11 +41,7 @@ function Effets() {
       }
     }
   };
-  const [isRect, setIsRect] = useState(false);
 
-  const toggleClipPath = () => {
-    setIsRect(!isRect);
-  };
 
   return (
     <div className="contenairEffets">
@@ -82,28 +79,8 @@ function Effets() {
           <img src="../assets/images/coreaux.jpg" alt="Image" />
         </div>
       )}
-      </div>
-      <div className="testsvg">
-        <p>je continue mon travail sur le svg et cet approche me permet un resultat. Me reste a creer un composant svg qui sera à l&apos;ecoute du pointer <br />
-        je veux intégrer une notion d&apos;arrêt et accéleration</p>
-     
-        <svg width="250" height="450" viewBox="0 0 250 450">
-        <defs>
-          <clipPath id="clipPath">
-            <path
-              className={`clip-path ${isRect ? 'rect' : ''}`}
-              d="M0 90 Q125 0, 250 90 L250 450 C125 360, 0 450, 0 450 Z"
-            />
-          </clipPath>
-        </defs>
-        <rect
-          width="250"
-          height="450"
-          style={{ clipPath: 'url(#clipPath)', fill: 'lightblue' }}
-        />
-      </svg>
-      <button onClick={toggleClipPath}>Toggle Clip-Path</button>
-      </div>
+      </div> 
+      <Thesvg />
     </div>
   );
 }
