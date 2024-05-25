@@ -2,20 +2,28 @@
     text-align: center;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-.contenairEffets p {
+.zone1 {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*.contenairEffets p {
     position: absolute;
     top:75px
-  }
+  }*/
   .zoneHover {
     height: 10vh;
     width: 40vw;
     z-index: 50;
-    position: relative;
     border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 50px;
   }
   .imagehover {
   
@@ -28,5 +36,29 @@
     border-radius: 13em / 3em;
     height: 450px;
     width: 250px;
+  }
+  .testsvg {
+    display: flex;
+    margin-top: 200px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .testsvg p {
+    display: block;
+    text-align: center;
+  }
+  .clip-path {
+    transition: d 2s linear;
+  }
+  
+  .clip-path.rect {
+    d: path('M0 90 Q125 90, 250 90 L250 450 C125 450, 0 450, 0 450 Z');
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
   }
   
