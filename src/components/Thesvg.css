@@ -2,11 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
 }
 
 .clip-path {
-    transition: d 2s linear;
+    transition: d 0.5s linear;
   }
   
   .clip-path.rect {
