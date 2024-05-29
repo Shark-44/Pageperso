@@ -32,6 +32,7 @@ function Effets() {
 
   return (
     <div className="contenairEffets">
+      
       <Navbar />
       <div className="zone1">
       <p> A travers un site <a href="https://lanouvelle.agency/" target="_blank" rel="noreferrer">la nouvelle agency </a> je tente de travailler sur des effets. 
