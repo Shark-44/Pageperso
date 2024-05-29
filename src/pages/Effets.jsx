@@ -1,13 +1,13 @@
 import './Effets.css';
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Navbar from "../components/Navbar";
-import Thesvg from '../components/Thesvg';
+
+import MouseTracker from '../components/MouseTracker';
 
 function Effets() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
-  const lastSpeedX = useRef(0);
-  const lastSpeedY = useRef(0);
+
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -24,20 +24,7 @@ function Effets() {
       const currentTime = Date.now();
 
       if (mousePosition.x !== currentMouseX && mousePosition.y !== currentMouseY) {
-        const distanceX = currentMouseX - mousePosition.x;
-        const distanceY = currentMouseY - mousePosition.y;
-        const deltaTime = currentTime - mousePosition.timestamp;
-
-        const speedX = distanceX / deltaTime;
-        const speedY = distanceY / deltaTime;
-
-        console.log("Last Speed X:", lastSpeedX.current);
-        console.log("Last Speed Y:", lastSpeedY.current);
-
-        lastSpeedX.current = speedX;
-        lastSpeedY.current = speedY;
-
-        setMousePosition({ x: currentMouseX, y: currentMouseY, timestamp: currentTime });
+         setMousePosition({ x: currentMouseX, y: currentMouseY, timestamp: currentTime });
       }
     }
   };
@@ -75,12 +62,10 @@ function Effets() {
             left: mousePosition.x,
           }}
         >
-
-          <img src="../assets/images/coreaux.jpg" alt="Image" />
+          <MouseTracker />
         </div>
       )}
-      </div> 
-      <Thesvg />
+      </div>       
     </div>
   );
 }
