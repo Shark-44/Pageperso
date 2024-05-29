@@ -5,7 +5,9 @@ body {
 #root {
   width: 100vw;
 }
-
+.hide-scrollbar {
+  overflow: hidden;
+}
 .App h1 {
   position: absolute;
   top: 40%;

@@ -8,6 +8,13 @@ const MouseTracker = () => {
   const [speed, setSpeed] = useState('');
   const [lastTime, setLastTime] = useState(0);
   const [timeoutId, setTimeoutId] = useState(null);
+  /* Pour cacher la scroolbar*/
+  useEffect(() => {
+    document.body.classList.add('hide-scrollbar');
+    return () => {
+      document.body.classList.remove('hide-scrollbar');
+    };
+  }, []);
 
   useEffect(() => {
     const handleMouseMove = (event) => {
@@ -54,6 +61,7 @@ const MouseTracker = () => {
     };
 
     window.addEventListener('mousemove', handleMouseMove);
+
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);

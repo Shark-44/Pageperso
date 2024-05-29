@@ -1,9 +1,12 @@
+
 .contenairEffets {
     text-align: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+    scrollbar-width: none;
 }
 .zone1 {
   margin-top: 80px;
@@ -11,10 +14,7 @@
   flex-direction: column;
   align-items: center;
 }
-/*.contenairEffets p {
-    position: absolute;
-    top:75px
-  }*/
+
   .zoneHover {
     height: 10vh;
     width: 40vw;
@@ -24,6 +24,10 @@
     align-items: center;
     justify-content: center;
     margin-top: 100px;
+  
+  }
+  .zoneHover:hover {
+    color: yellow;
   }
 .imagehover {
     position: absolute; 
