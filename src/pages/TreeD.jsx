@@ -4,10 +4,11 @@ import { Canvas, useLoader } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
 import Navbar from "../components/Navbar";
+ import Terre from "../assets/space/Terre.webp"
 
 /* mesh permet la forme avec la structure */
 const TexturedSphere = (props) => {
-  const Texture = useLoader(THREE.TextureLoader, '../public/Terre.webp');
+  const Texture = useLoader(THREE.TextureLoader, Terre);
 
   return (
     <mesh {...props}>
