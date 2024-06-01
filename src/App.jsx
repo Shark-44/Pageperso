@@ -12,6 +12,7 @@ import Page2 from "./pages/Page2"
 import StarWars from "./pages/StarWars"
 import Nature from "./pages/Nature"
 import Effets from "./pages/Effets"
+import TreeD from "./pages/TreeD"
 
 import { AnimatePresence } from 'framer-motion'
 import { useLocation } from 'react-router-dom'
@@ -35,6 +36,7 @@ function App() {
         <Route path="/StarWars" element={<StarWars />} />
         <Route path="/Nature" element={<Nature />} />
         <Route path="/Effets" element={<Effets />} />
+        <Route path="/3D" element={<TreeD />} />
       </Routes>
     </AnimatePresence>
   )
