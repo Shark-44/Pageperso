@@ -1,3 +1,10 @@
+
+.contenaire3D {
+    background-image: url(../assets/space/space.webp) ;
+
+}
 .contenaire3D h2 {
     margin-top: 100px;
+    background: none;
+    color: white;
 }

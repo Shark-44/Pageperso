@@ -1,5 +1,4 @@
-import "./TreeD.css"
-
+import "./TreeD.css";
 import { useRef, useState } from 'react';
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
@@ -10,15 +9,22 @@ import Terre from "../assets/space/Terre.webp";
 import Lune from "../assets/space/moon.webp";
 
 const TexturedSphere = (props) => {
+  const meshRef = useRef();
   const texture = useLoader(THREE.TextureLoader, Terre);
 
+  useFrame(() => {
+    if (meshRef.current) {
+      meshRef.current.rotation.y += 0.01; // Adjust the rotation speed as needed
+    }
+  });
+
   return (
-    <mesh {...props}>
+    <mesh ref={meshRef} {...props}>
       <sphereGeometry args={[1, 32, 32]} /> {/* eslint-disable-line react/no-unknown-property */}
       <meshStandardMaterial map={texture} /> {/* eslint-disable-line react/no-unknown-property */}
     </mesh>
   );
-}
+};
 
 const OrbitMoon = ({ radius, speed, center }) => {
   const meshRef = useRef();
@@ -26,7 +32,7 @@ const OrbitMoon = ({ radius, speed, center }) => {
   const textureM = useLoader(THREE.TextureLoader, Lune);
 
   useFrame((state, delta) => {
-    setAngle(prevAngle => prevAngle + speed * delta);
+    setAngle(prevAngle => prevAngle - speed * delta); 
     meshRef.current.position.x = center[0] + radius * Math.cos(angle);
     meshRef.current.position.z = center[2] + radius * Math.sin(angle);
   });
@@ -37,7 +43,7 @@ const OrbitMoon = ({ radius, speed, center }) => {
       <meshStandardMaterial map={textureM} /> {/* eslint-disable-line react/no-unknown-property */}
     </mesh>
   );
-}
+};
 
 OrbitMoon.propTypes = {
   radius: PropTypes.number.isRequired,
@@ -59,7 +65,6 @@ const TreeD = () => {
       </Canvas>
     </div>
   );
-}
+};
 
 export default TreeD;
-
