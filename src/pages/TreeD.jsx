@@ -58,7 +58,7 @@ const TreeD = () => {
       <h2>Utilisez la molette pour zoomer et click gauche maintenu pour tourner la planète</h2>
       <Canvas style={{ height: '100vh' }}>
         <ambientLight />
-        <pointLight position={[10, 10, 10]} /> {/* eslint-disable-line react/no-unknown-property */}
+        <pointLight position={[1000, 1000, 0]} /> {/* eslint-disable-line react/no-unknown-property */}
         <TexturedSphere position={[0, 0, 0]} />
         <OrbitMoon radius={2} speed={1} center={[0, 0, 0]} />
         <OrbitControls />

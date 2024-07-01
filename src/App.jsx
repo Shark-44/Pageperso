@@ -13,6 +13,7 @@ import StarWars from "./pages/StarWars"
 import Nature from "./pages/Nature"
 import Effets from "./pages/Effets"
 import TreeD from "./pages/TreeD"
+import Cubes from "./pages/Cubes"
 
 import { AnimatePresence } from 'framer-motion'
 import { useLocation } from 'react-router-dom'
@@ -37,6 +38,7 @@ function App() {
         <Route path="/Nature" element={<Nature />} />
         <Route path="/Effets" element={<Effets />} />
         <Route path="/3D" element={<TreeD />} />
+        <Route path="/Cubes" element={<Cubes />} />
       </Routes>
     </AnimatePresence>
   )

@@ -38,6 +38,10 @@ function Dropdown() {
         navigate("/3D")
         setOpen(false);
       };
+      const handleMenuEight = () => {
+        navigate("/Cubes")
+        setOpen(false);
+      };
       return (
         <div>
           <button onClick={handleOpen}>Mes essais</button>
@@ -61,6 +65,9 @@ function Dropdown() {
           </li>
           <li className="menu-item">
             <button onClick={handleMenuSeven}>Essais 3D Three.js</button>
+          </li>
+          <li className="menu-item">
+            <button onClick={handleMenuEight}>Cubes sauteurs</button>
           </li>
           <li className="menu-item">
             <button onClick={handleMenuTwo}>Info Ma page</button>
